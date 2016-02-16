@@ -1,0 +1,132 @@
+@import bourbon
+@import fonts.sass
+@import vars.sass
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.6
+	font-family: "OpenSansRegular", sans-serif
+	overflow-x: hidden
+	margin: auto
+
+
+.hidden
+	display: none
+
+a
+	outline: none 
+	&:hover, &:active, &:focus 
+		text-decoration: none
+		color: #fff
+
+h1, h2, h3, h4, h5, h6
+	line-height: em(22px)
+
+h1
+	font-size: em(40px)
+
+h2
+	font-size: em(28px)
+
+h3
+	font-size: em(20px)
+
+li
+	list-style-type: none
+
+header
+	//background-color: #FFF
+	
+
+.top-line
+	max-width: 1250px
+	margin: auto
+	.col-md-6
+		//padding-left: 60px
+	.col-md-3
+		padding: 0
+	.col-md-2, .col-md-4
+		padding-left: 60px
+	line-height: em(62px)
+	padding-top: 21px
+
+.shopping-cart
+	img
+		float: left
+		padding-right: 15px
+	p
+		text-transform: uppercase
+
+.search-form
+	margin-top: 30px
+	line-height: 40px
+	white-space: nowrap
+	input
+		vertical-align: top
+		background-color: #fff
+		border: 1px solid #e5e5e5
+		box-shadow: 4px 4px 5px rgba(0,0,0,0.06) inset
+		transition: border linear .2s, box-shadow linear .2s
+		width: 260px
+		height: 40px
+		padding-left: 10px
+		font-size: 14px
+		margin-right: -4px
+	.search
+		display: inline-block
+		background: #f93131
+		font-size: 24px
+		text-align: center
+		width: 50px
+		text-decoration: none
+		transition: all .5s
+		.fa-search
+			color: #fff
+		&:hover
+			background-color: black
+
+.bottom-line
+	margin-top: 10px
+	border-top: 1px solid #e5e5e5
+	border-bottom: 3px solid #e5e5e5
+	max-width: 100%
+	.container-fluid
+		max-width: 1250px
+		margin: auto
+
+.main-mnu
+	font-size: em(16px)
+	text-transform: uppercase
+	border-left: 1px solid #e5e5e5
+	ul
+		margin: 0
+		padding: 0
+		list-style-position: inside
+		.active
+			box-shadow: 0px -3px 0px 0px red
+		li
+			display: inline-block
+			height: 55px
+			line-height: 55px
+			padding: 0 20px
+			border-right: 1px solid #e5e5e5
+			text-transform: uppercase
+			font-weight: 600
+			transition: all .4s
+			&:hover, &:active, &:focus
+				box-shadow: 0px -3px 0px 0px red
+			a
+				display: block
+				padding: 0
+				color: black
+				transition: all .3s
+				&:hover
+					color: red
+
+
+
+
+
+

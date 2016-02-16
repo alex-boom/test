@@ -1,0 +1,143 @@
+@import bourbon
+
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px)
+	/**/
+	.banner-wrap
+		display: none
+	.widget-wrap
+		display: none
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px)
+	/**/
+	.item-banner a h2
+		font-size: em(18px)
+		line-height: em(18px)
+			
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+
+	.content 
+		.prod
+			h4
+				font-size: 13px
+
+	.main-mnu
+		border-left: none
+		ul
+			li
+				font-size: em(13px)
+				border-right: none
+
+	
+	/*Disable Animation on Mobile Devices*/
+	.animated
+		/*CSS transitions*/
+		-o-transition-property: none !important
+		-moz-transition-property: none !important
+		-ms-transition-property: none !important
+		-webkit-transition-property: none !important
+		transition-property: none !important
+		/*CSS transforms*/
+		-o-transform: none !important
+		-moz-transform: none !important
+		-ms-transform: none !important
+		-webkit-transform: none !important
+		transform: none !important
+		/*CSS animations*/
+		-webkit-animation: none !important
+		-moz-animation: none !important
+		-o-animation: none !important
+		-ms-animation: none !important
+		animation: none !important
+	.item-banner a h2
+		font-size: em(22px)
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+	/**/
+	.content 
+		.prod
+			h4
+				font-size: 10px
+
+	.item-banner a h2
+		font-size: em(10px)
+		
+	.bottom-item-wrap
+		.col-xs-6
+			width: 100%
+	/*.banner-wrap
+		.banner-link
+			p
+				display: none
+			.wrap
+				h3
+					span
+						font-size: em(19px)!important*/
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px)
+	/**/
+	.content 
+		margin: 0 15px
+		padding: 15px 0 0
+		background-color: #FFF
+		border: 1px solid #e5e5e5
+		border-bottom: none
+
+	.bottom-line
+		.col-lg-8
+			padding-left: 20px
+
+	ul
+			li
+				font-size: em(10px)
+
+	.search-form
+		display: none
+
+	.bottom-item-wrap
+		.col-xs-6
+			width: 100%
+
+	.item-banner
+		a
+			.fa-arrow-circle-right 
+				font-size: em(20px)
+
+	.content .prod h4
+		font-size: 10px
+		font-weight: 0
+
+
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
+	/**/
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px)
+	/**/
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+	/**/
+
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+	/**/
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+	/**/
+

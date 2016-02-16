@@ -1,0 +1,410 @@
+@import bourbon
+@import vars.sass
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+.main
+	background-color: #eee
+	padding-top: 30px
+	
+
+.content
+	//margin: 0 60px 0
+	padding: 30px 15px
+	padding-bottom: 0
+	background-color: #FFF
+	border: 1px solid #e5e5e5
+	border-bottom: none
+	max-width: 1250px
+	margin: auto
+	.prod
+		padding-left: 15px
+		h4
+			text-transform: uppercase
+			background: #f93131
+			color: #fff
+			font-weight: 600
+			padding: 14px 17px
+			display: inline-block
+			white-space: nowrap
+			margin: 30px 0
+
+
+
+
+.top-item-wrap
+	padding-bottom: 30px
+	border-bottom: 1px solid #e5e5e5
+.item-banner
+	position: relative		
+	a
+		color: red
+		&:hover h2
+			transform: scale(1.2)
+		&:hover .fa-arrow-circle-right
+			color: black
+		img
+			width: 100%
+		h2
+			transition: .2s
+			position: absolute
+			top: 0
+			left: 0
+			text-transform: uppercase
+			padding: 0 0 0 25px
+			line-height: 30px
+			span
+				font-size: em(22px)
+				font-family: "OpenSansSemiBold", sans-serif
+				color: black
+				padding-bottom: 3px
+		.fa-arrow-circle-right
+			position: absolute
+			bottom: 25px
+			right: 25px
+			font-size: 30px
+			color: #fff
+			transition: .5s
+
+.bottom-item-wrap
+	padding-bottom: 15px
+	border-bottom: 1px solid #e5e5e5
+
+.item-product
+	position: relative
+	margin-bottom: 15px
+	&:hover img
+		box-shadow: 0 -1px 3px 2px rgba(0,0,0,0.3)
+	&:hover h3
+		color: red
+	.onsale 
+		position: absolute
+		min-height: 32px
+		min-width: 40px
+		padding: 0 4px
+		font-family: "OpenSansLight", sans-serif
+		font-size: 12px
+		font-weight: 600
+		text-align: center
+		line-height: 32px
+		top: 10px
+		border-radius: 0
+		box-shadow: none
+		background: #f93131
+		right: -5px
+		left: auto
+		margin: 0
+		color: #fff
+		text-shadow: none
+		border: 0px transparent solid
+	img
+		box-sizing: border-box
+		width: 100% !important
+		height: auto !important
+		display: block
+		margin: 0 0 8px
+		background: #f4f4f4
+		border: none
+		border-radius: 0
+		box-shadow: 0 0 0 rgba(0,0,0,0), 0 0 0 rgba(0,0,0,0)
+		padding: 0
+		transition: all ease-in-out .2s
+	h3
+		font-size: 14px
+		line-height: 18px
+		color: #787878
+		padding: 0 0 5px 0
+		min-height: 36px
+		font-style: normal
+		font-weight: normal
+		display: block
+		font-family: Arial, Helvetica, sans-serif
+		text-transform: none
+	.star-rating
+		position: absolute
+		top: 0
+		visibility: hidden
+		left: 10px
+		background: #fff
+		border: 6px solid #fff
+		box-shadow: 0 0 0 2px #f93131
+		transition: all 300ms linear
+		font-size: 16px
+		//font-family: "Star Things"
+		line-height: 1em
+		&:before
+			color: #DFDBDF
+			content: "sssss"
+			float: left
+			left: 0
+			position: absolute
+			top: 0
+		span
+			height: 0
+			overflow: hidden
+			cursor: default
+			float: left
+			left: 0
+			padding-top: 1.5em
+			position: absolute
+			top: 0
+			&:before
+				color: #f93131
+				content: ""
+				left: 0
+				position: absolute
+				top: 0
+			strong
+				font-size: 14px
+				line-height: 18px
+				color: #787878
+				padding: 0 0 5px 0
+				min-height: 36px
+				font-style: normal
+				font-weight: normal
+				display: block
+				font-family: Arial, Helvetica, sans-serif
+				text-transform: none
+		.rate_content
+			right: -7px
+			&:after
+				position: absolute
+				content: ""
+				bottom: -6px
+				right: 10px
+				border-top: 7px solid #f93131
+				border-left: 7px solid transparent
+				border-right: 7px solid transparent
+				border-bottom: 0 solid transparent 
+	.price
+		color: #f93131
+		font-size: 17px
+		line-height: 20px
+		float: none
+		text-align: left
+		font-family: "OpenSansRegular", sans-serif
+		display: block
+		font-weight: normal
+		padding: 0
+		margin-bottom: em(5px)
+		background-color: #FFF
+		del
+			font-size: 16px
+			display: inline-block
+			text-transform: lowercase
+			color: #181818
+			.amount
+				font-size: 16px
+				text-transform: lowercase
+
+.buy
+	display: inline-block
+	font-size: em(14px)
+	text-transform: none
+	color: #fff
+	background-color: red
+	padding: 9px
+	letter-spacing: 1px
+	transition: all .5s
+	&:hover
+		background-color: black
+	.fa-arrow-circle-right
+		font-size: 17px
+
+.banner-wrap
+	padding-top: 30px
+	padding-bottom: 30px
+	border-bottom: 1px solid #e5e5e5
+	.banner-link
+		background: #f93131
+		transition: all 300ms linear
+		display: block
+		padding: 15px 20px 10px
+		text-decoration: none !important
+		min-height: 68px
+		color: #fff
+		text-align: center
+		&:hover
+			background-color: black
+		.wrap
+			display: block
+			img, h1, h3, p
+				display: inline-block
+				vertical-align: top
+			h3
+				line-height: 23px
+				margin: 0
+				text-transform: uppercase
+				font-size: 20px
+				text-align-last: left
+				span
+					font-size: 28px
+			img
+				//margin-top: 5px
+				margin-right: 5px
+		p
+			font-size: em(14px)
+			line-height: 0
+	.banner-link-2
+		border: 5px solid #e5e5e5
+		background: #fff
+		padding-bottom: 1px
+		h3
+			color: red
+		span
+			color: black
+		p
+			color: #787878
+		&:hover
+			background: #e5e5e5
+	.banner-link-3
+		background: black
+		padding-bottom: 5px
+		h1
+			line-height: 0px
+
+		p
+			color: #787878
+			transition: all 300ms linear
+		&:hover
+			background: red
+			p
+				color: #fff
+
+.widget
+	background-color: #eee
+	padding-bottom: 60px
+	//margin: auto
+
+.widget-wrap
+	//margin: 0 60px
+	padding: 30px 15px 0
+	background-color: #FFF
+	border: 1px solid #e5e5e5
+	border-top: none
+	max-width: 1250px
+	margin: auto
+
+.widget-item
+	h4
+		text-transform: uppercase
+		line-height: 0
+		font-family: "OpenSansSemiBold", sans-serif
+	ul
+		padding: 0
+		li
+			line-height: em(33px)
+			span
+				font: normal 14px/20px Arial, Helvetica, sans-serif
+				color: #787878
+				display: inline-block
+				margin-top: 10px
+
+			a
+				transition: all .5s
+				font: normal 14px/20px Arial, Helvetica, sans-serif
+				color: #787878
+				&:hover
+					color: red
+			.fa-arrow-circle-right, .fa-home
+				color: red
+				margin-right: 7px
+				font-size: em(19px)
+.icon
+	.fa
+		transition: all .5s
+		padding-right: 3px
+		color: #787878
+		&:hover
+			color: red
+
+.sidebar
+	h3
+		padding-left: 40px
+		text-transform: uppercase
+	ul
+		li
+			line-height: 0
+			padding: 0 0 15px 24px
+			background: url(img/list-marker.png) no-repeat 0 2px
+			a
+				font: normal 17px/20px Arial, Helvetica, sans-serif
+				color: red
+				letter-spacing: 1px
+				transition: .5s
+				&:hover
+					color: black
+					text-decoration: underline
+
+.social-networks 
+	padding: 5px 0 0
+	margin: 0 0 0 -11px
+	font-size: 15px
+	line-height: 1.2
+	ul
+		li
+			padding: 3px
+			background: 0
+			float: left	
+
+			a
+				color: #fff
+				.fa-facebook-square
+					font-size: 67px
+					color: #3b5998
+				.fa-twitter-square
+					font-size: 67px
+					color: #56c5f3
+				.fa-vk
+					font-size: 44px
+					color: #fff
+					padding: 7px
+					padding-left: 5px
+					padding-right: 5px
+					background-color: #0775b7
+					border-radius: 10px
+					margin-top: 4px
+
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//ALWAYS END
+@import media
+
+//Load Libs SASS
+@import app/libs/animate/animate.sass
