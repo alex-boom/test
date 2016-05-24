@@ -16,4 +16,20 @@ import HP from './helpers';
     console.log(`Hello in ES6... I am ${n} - random number between 10 and 20`);
   }
 
+  window.onload = function(){
+    document.getElementById('add').onclick = startDiscus;
+      }
+
+     function startDiscus(){
+      
+      var text = document.getElementById('txt').value;
+      var comm = document.createElement('p');
+      var newText = document.createTextNode(text);
+      
+      comm.appendChild(newText);
+      
+      document.getElementById('discus').appendChild(comm);
+      return true;
+  }
+
 }(jQuery));

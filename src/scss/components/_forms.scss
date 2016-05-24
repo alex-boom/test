@@ -1,0 +1,11 @@
+.holder-form{
+	overflow: hidden;
+	background: $light-gray;
+}
+.form-comments{
+	padding: 30px 14px 19px;
+	.textarea{
+		width: 100%;
+		margin-bottom: 11px;
+	}
+}

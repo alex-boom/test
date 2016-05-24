@@ -1,0 +1,188 @@
+.block-profile{
+	overflow: hidden;
+	padding: 15px 15px;
+	.profile-photo{
+		position: absolute;
+	}
+	.profile-info{
+		padding: 6px 0 0 128px;
+		.profile-name{
+			margin-bottom: 8px;
+			strong{
+				font-size: 17px;
+				line-height: 22px;
+			}
+			span{
+				font-size: 12px;
+				color: $dark-gray;
+			}
+		}
+		.profile-current-info{
+			background: $pale-yellow;
+			padding: 8px 10px 8px 30px;
+			margin-left: -31px;
+			border: 1px solid $grayish-orange;
+			border-radius: 5px;
+			line-height: 19px;
+			@include media('<phone'){
+				line-height: 13px;
+				font-size: 12px;
+				padding: 4px 10px 4px 30px;
+			}
+		}
+	}
+}
+.block-services{
+	overflow: hidden;
+	padding: 0 15px;
+	margin-bottom: 22px;
+	@extend %clearfix;
+	.wrapper-services{
+		@extend %clearfix;
+		float: right;
+		width: 72%;
+		@include media('<xs-phone'){
+			width: 100%;
+		}
+		.services{
+			font-size: 13px;
+			text-align: right;
+			padding-right: 37px;
+		}
+		.list-services{
+			@extend %listreset;
+			padding: 14px 0;
+			margin: 4px 0 12px;
+			border: 1px solid $grayish-orange;
+			border-width: 1px 0 1px 0;
+			li{
+				@extend %clearfix;
+				border-left: 1px solid $grayish-orange;
+				padding-right: 45px;
+				margin: 0 0 2px 3px;
+				.link{
+					display: block;
+					float: left;
+					line-height:: 24px;
+					text-decoration: none;
+					background: $soft-green;
+					border-radius: 0 3px 3px 0;
+					width: 78%;
+					font-size: 13px;
+					padding-left: 5px;
+					white-space: nowrap;
+					color: $black;
+					&.link2{
+						width: 19%;
+						background: $soft-blue;
+					}
+					&.link3{
+						width: 12%;
+						background: $soft-blue;
+					}
+				}
+				strong{
+					float: right;
+					display: block;
+					line-height: 24px;
+				}
+			}
+		}
+		.total{
+			font-size: 16px;
+			padding-right: 45px;
+			span{
+				@extend %clearfix;
+				float: right;
+			}
+		}
+	}
+}
+.box-testimonials{
+	overflow: hidden;
+	padding: 0 15px;
+	margin-bottom: 8px;
+	@extend %clearfix;
+	.testimonials{
+		@extend %listreset;
+		float: left;
+		li{
+			float: left;
+			margin-right: 10px;
+			line-height: 20px;
+			@include media('<phone') {
+				float: none;
+			}
+		}
+		.active{
+			color: $black;
+			font-size: 16px;
+			font-weight: bold;
+			text-decoration: none;
+		}
+	}
+	.counter{
+		@extend %listreset;
+		float: right;
+		line-height: 20px;
+		white-space: nowrap;
+		li:last-child{
+			margin-right: 10px;
+		}
+		li{
+			float: left;
+			margin-right: 20px;
+			font-size: 12px;
+			letter-spacing: -1px;
+			.icon{
+				text-decoration: none;
+				margin-right: 5px;
+				line-height: 24px;
+			}
+		}
+	}
+}
+.box-comments{
+	overflow: hidden;
+	padding: 0 15px;
+	margin-bottom: 5px;
+	.comments{
+		@extend %listreset;
+		.header{
+			margin-bottom: 12px;
+			time{
+				font-size: 11px;
+				color: $dark-gray;
+			}
+		}
+		p{
+			position: relative;
+			padding: 13px 20px;
+			background-color: $pale-blue;
+			border: 1px solid $grayish-orange;
+			line-height: 19px;
+			margin-bottom: 17px;
+			&:before{
+				content: "";
+				position: absolute;
+				bottom: 100%;
+				display: block;
+				height: 0;
+				width: 0;
+				border-right: 10px solid transparent;
+				border-bottom: 10px solid $grayish-orange;
+			}
+			&:after{
+				content: "";
+				position: absolute;
+				bottom: 100%;
+				display: block;
+				height: 0;
+				width: 0;
+				border-right: 7px solid transparent;
+				border-bottom: 7px solid $pale-blue;
+				margin-left: 1px;
+			}
+		}
+	}
+}

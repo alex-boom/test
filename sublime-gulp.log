@@ -1,0 +1,17 @@
+Remember that you can report errors and get help in https://github.com/NicoSantangelo/sublime-gulp
+
+05-22-2016 18:56:
+D:\Work\Antagosoft\.sublime-gulp-tmp.js:39
+  var update = require('gulp-update)();
+                       ^^^^^^^^^^^^^^^^
+SyntaxError: Unexpected token ILLEGAL
+    at Object.exports.runInThisContext (vm.js:53:16)
+    at Module._compile (module.js:513:28)
+    at Object.Module._extensions..js (module.js:550:10)
+    at Module.load (module.js:458:32)
+    at tryModuleLoad (module.js:417:12)
+    at Function.Module._load (module.js:409:3)
+    at Module.require (module.js:468:17)
+    at require (internal/module.js:20:19)
+    at requireGulp (C:\Users\Alexandr\AppData\Roaming\Sublime Text 3\Packages\Gulp\write_tasks_to_cache.js:28:16)
+    at Object.<anonymous> (C:\Users\Alexandr\AppData\Roaming\Sublime Text 3\Packages\Gulp\write_tasks_to_cache.js:83:12)

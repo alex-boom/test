@@ -1,0 +1,13 @@
+.btn-comments{
+	display: block;
+	margin: 15px auto;
+	font-weight: bold;
+	padding: 13px 58px;
+	background: $bright-yellow;
+	border: none;
+	border-radius: 21px !important;
+	@include animate(opacity);
+	&:hover{
+		opacity: .7;
+	}
+}
