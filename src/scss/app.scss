@@ -39,7 +39,7 @@ $media-expressions: (
 	margin: auto;
 	min-width: 420px;
 	min-height: 330px;
-	background: url('../../build/images/bg.jpg') no-repeat;
+	background: url('../build/images/bg.jpg') no-repeat;
 	position: relative;
 	overflow: hidden;
 	.box-table{
@@ -54,7 +54,7 @@ $media-expressions: (
 			left: 50%;
 			transform: translateX(-50%);
 			z-index: -1;
-			background: url('../../build/images/man.png') no-repeat;
+			background: url('../build/images/man.png') no-repeat;
 		}
 		&:after{
 			@extend %vertical-align;
