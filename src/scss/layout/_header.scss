@@ -1,0 +1,24 @@
+.header{
+	padding: 9px 0 0;
+	background: $white;
+	margin-bottom: 41px;
+	.promobox{
+		text-transform: uppercase;
+		font-size: 11px;
+		margin: 4px 0 0 152px;
+		font-weight: bold;
+		color: $yuma;
+		@media (max-width: $screen-md-max) {
+			text-align: center;
+			margin-left: 0;
+		}
+		@media (max-width: $screen-xs-max) {
+			margin-top: -8px;
+			font-size: 8px;
+			line-height: 0;
+		}
+		img{
+			margin-right: 10px;
+		}
+	}
+}

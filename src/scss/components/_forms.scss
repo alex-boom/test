@@ -1,0 +1,53 @@
+.form{
+	.form-group{
+		position: relative;
+		.form-control{
+			background: $romance;
+			border: 0;
+			border-radius: 5px;
+			color: $wasabi;
+			font-size: 12px;
+			font-style: italic;
+			height: 36px;
+			padding: 0 40px 0 14px;
+			@include placeholder {
+				color: $wasabi;
+			}
+		}
+		.btn{
+			position: absolute;
+			top: 0;
+			right: 0;
+			border: 0;
+			background: none;
+			padding: 0;
+			.fa{
+				padding: 8px 16px;
+				font-size: 17px;
+				text-transform: uppercase;
+				color: $wasabi;
+				@include animate(opacity);
+				&:hover{
+					opacity: .7;
+				}
+			}
+		}
+	}
+	&.search{
+		margin-left: 71px;
+		@media (max-width: $screen-md-max) {
+			margin-left: 0;
+		}
+	}
+	&.maile{
+		margin-top: -5px;
+		width: 70%;
+		margin-left: -8px;
+		@media (max-width: $screen-xs-max) {
+			width: 100%;
+		}
+		.fa{
+			font-size: 21px !important;
+		}
+	}
+}

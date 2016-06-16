@@ -1,0 +1,67 @@
+.aside{
+	@extend %clearfix;
+	@media (max-width: $screen-xs-max) {
+		border-bottom: 1px solid #dadada;
+		padding-bottom: 10px;
+		margin-bottom: 40px;
+	}
+}
+.section-aside{
+	margin: 0 -15px 28px;
+	@media (max-width: $screen-xs-max) {
+		float: left;
+		width: 50%;
+		padding: 0 0 0 50px;
+		margin: 0 0 30px 0;
+	}
+	@media (max-width: 470px) {
+		text-align: center;
+		width: 100%;
+		padding: 0;
+	}
+	h3{
+		text-transform: uppercase;
+		color: $bud;
+		margin: 0 0 29px 0;
+		@media (max-width: $screen-xs-max) {
+			margin-bottom: 10px;
+		}
+	}
+	.list{
+		@extend %listreset;
+		li{
+			line-height: 24px;
+			a{
+				color: $bronzetone;
+				font-weight: bold;
+				@include animate(color);
+				&:hover{
+					color: $chelsea-cucumber;
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+	&.follow-us{
+		a{
+			&:hover .fa{
+				color: $buttercup;
+			}
+		}
+		.fa{
+			margin-right: 15px;
+			font-size: 15px;
+			color: $bronzetone;
+			@include animate(color);
+			@media (max-width: 470px) {
+				display: none;
+			}
+			&.fa-facebook{
+				margin-right: 19px;
+			}
+			&.fa-twitter{
+				margin-right: 12px;
+			}
+		}
+	}
+}

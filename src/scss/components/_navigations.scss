@@ -1,0 +1,99 @@
+.navbar{
+	margin-bottom: 0;
+}
+.navbar-default {
+	background: none;
+	border: none;
+}
+.navbar-toggle{
+	margin-top: 29px;
+}
+.main-nav{
+	@extend %clearfix;
+	margin-bottom: -5px;
+	ul{
+		@extend %listreset;
+		@extend %clearfix;
+		margin: 19px 0 0 0px;
+		@media (max-width: $screen-md-max) {
+			float: right;
+		}
+		@media (max-width: $screen-xs-max) {
+			position: relative;
+			top: -20px;
+			float: none;
+			background: rgba(0, 0, 0, 0.4);
+		}
+		li{
+			float: left;
+			@include animate(opacity);
+			&:hover{
+				opacity: .6;
+			}
+			&:last-child a{
+				border: 0;
+			}
+			@media (max-width: $screen-xs-max) {
+				float: none;
+				text-align: center;
+				text-transform: uppercase;
+			}
+			a{
+				color: $turtle-green !important;
+				font-weight: bold;
+				font-size: 15px;
+				padding: 0 24px;
+				border-right: 1px solid;
+				@media (max-width: $screen-xs-max) {
+					border-bottom: solid $white;
+					border-width: 0 0 1px 0;
+					padding: 10px 0;
+					color: $white !important;
+				}
+			}
+			.counter{
+				font-size: 11px;
+				font-weight: bold;
+				margin-left: 5px;
+				color: $buttercup;
+			}
+		}
+	}
+	.logo{
+		margin-top: -21px;
+		@media (max-width: $screen-xs-max) {
+			margin-top: 5px;
+		}
+	}
+}
+.add-nav{
+	margin:0 0 9px 45px;
+	@extend %listreset;
+	@extend %clearfix;
+	@media (max-width: $screen-md-max) {
+		margin: 20px 0 9px 0;
+		text-align: center;
+	}
+	li{
+		float: left;
+		@include animate(opacity);
+		&:hover{
+			opacity: .7;
+		}
+		&:last-child a{
+			padding-right: 0;
+			border: 0;
+		}
+		@media (max-width: $screen-md-max) {
+			display: inline-block;
+			float: none;
+		}
+		a{
+			color: $turtle-green;
+			font-weight: bold;
+			font-size: 11px;
+			padding: 0 8px;
+			border-right: 1px solid;
+		}
+	}
+}
