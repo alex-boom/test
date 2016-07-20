@@ -2,18 +2,24 @@
 // Color calculator - http://razorjam.github.io/sasscolourfunctioncalculator/
 // Color names - http://name-of-color.com/
 
-$gray: #999;
-$black: #333;
+$gray: #ccc;
+$dark-gray: #646464;
+$black: #000;
 $white: #fff;
 $light-blue: #39f;
+$inch-worm: #A4D914;
+$free-speech-red: #C90000;
 
-$base-font-sans-serif: 'Arial', 'Helvetica Neue', 'Helvetica', sans-serif;
+
+
+
+$base-font-sans-serif: 'Myriad Pro Regular', 'Arial', 'Helvetica Neue', 'Helvetica', sans-serif;
 $base-font-serif: 'Times New Roman', 'Times', 'Baskerville', 'Georgia', serif;
 
 // Body
 $base-text-color: $black !default;
 $base-background-color: $white !default;
-$base-font-size: 16px !default;
+$base-font-size: 14px !default;
 $base-line-height: 1.2 !default;
 $base-font-family: $base-font-sans-serif !default;
 
@@ -34,12 +40,12 @@ $btn-font-size: inherit !default;
 $form-element-padding: $btn-padding !default;
 $form-element-border-color: $gray !default;
 $form-element-focus-border-color: $black !default;
-$placeholder-color: $gray !default;
+$placeholder-color: $dark-gray !default;
 
 // Headers
-$h1-font-size: 30px !default;
-$h2-font-size: 27px !default;
-$h3-font-size: 24px !default;
+$h1-font-size: 42px !default;
+$h2-font-size: 30px !default;
+$h3-font-size: 22px !default;
 $h4-font-size: 21px !default;
 $h5-font-size: 17px !default;
 $h6-font-size: 15px !default;

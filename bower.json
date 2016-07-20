@@ -23,5 +23,6 @@
     "jquery": "~2.2.0",
     "normalize-css": "~3.0.3",
     "include-media": "~1.4.2"
+    "owl.carousel": "https://github.com/OwlCarousel2/OwlCarousel2.git#^2.1.5"
   }
 }
