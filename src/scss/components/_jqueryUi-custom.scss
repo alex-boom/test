@@ -1,0 +1,32 @@
+// .ui-dialog  {
+// 	.ui-dialog-titlebar{
+// 		background: red;
+// 	}
+// }
+
+// .ui-dialog {
+// 	.ui-dialog-content{
+// 		background: aqua;
+// 	}
+// }
+
+//overlay modal
+.ui-widget-overlay {
+	background: black;
+	opacity: 0.6;}
+
+/*Кастомизация треугольика в селектах*/
+.ui-button{
+	.ui-icon{
+		background-image: url(images/buttons.png);
+		&:hover,
+		&:focus{
+			background-image: url(images/buttons.png);
+		}
+	}
+}
+
+.ui-icon-triangle-1-s{
+	background-position: 0 0;
+}
+/*Кастомизация треугольика в селектах*/
