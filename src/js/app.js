@@ -185,12 +185,34 @@ import HP from './helpers';
 		//Флажки
 		$(".checkboks").buttonset();
 
+		//progressbar
+		$( "#progressbar" ).progressbar({
+					value: 0
+				}).css('width', '200px');
 
 
+		$('.button').click(function(evt) {
+			evt.preventDefault ();
+			$( "#progressbar" ).progressbar({
+					value: 50
+				});
+		});
 
-
-
-
+		//Свободное перемещение по странице стр.569-590
+		$("#main-menu").draggable({
+			cursor: 'pointer',
+			//axis: 'x',//передвижение только по оси х
+			//cancel: 'li',//при наведении на ли передвижения не произойдет(можно частично отключать элементы внутри передвигаемого окна)
+			//handle: 'li',//наоборот при наведении на ли перемещение произойдет, а если навести на другую область перемещения не будет
+			containment: '.holder',//перемещение только в пределах контейнера или задать значение 'parent' указание не явно на родителя
+			helper: 'clone',//не перемещает сам объект, а делает его клон и его перемещает
+			start: function(event){//фнукция на события(событие старт)
+				$('#hello').dialog('open');
+			},
+			stop: function(event){
+				$('#hello').dialog('close');
+			},
+		});
 
 
 

@@ -11,7 +11,7 @@
 		<style>
 			body {
 					padding: 100px;
-					max-width: 1200px;
+					max-width: 1300px;
 					margin: 0 auto;
 			}
 			
@@ -47,6 +47,21 @@
 			#tabbedpanel {
 					margin-bottom: 100px;
 			}
+
+			.button {
+				background: #ccc;
+				padding: 10px;
+				margin: 20px auto;
+				display: inline-block;
+			}
+			#main-menu{
+				max-width: 1000px;
+			}
+			.holder{
+				max-width: 1200px;
+				height: 100px;
+			}
+
 		</style>
 
 </head>
@@ -63,28 +78,29 @@
 		<br>
 		<br>
 		<!-- Смарт-меню(дропдаун меню) с помощью плагина smartmenus -->
-		<h1>Смарт меню(дропдаун-меню) плагин smartmenus</h1>
-		<ul id="main-menu" class="sm sm-simple">
-				<li><a href="#">Item 1</a></li>
-				<li><a href="#">Item 2</a>
-						<ul>
-								<li><a href="#">Item 2-1</a></li>
-								<li><a href="#">Item 2-2</a></li>
-								<li><a href="#">Item 2-3</a></li>
-						</ul>
-				</li>
-				<li><a href="#">Item 3</a></li>
-				<li><a href="#">Item 4</a></li>
-				<li><a href="#">Item 5</a>
-						<ul>
-								<li><a href="#">Item 5-1</a></li>
-								<li><a href="#">Item 5-2</a></li>
-								<li><a href="#">Item 5-3</a></li>
-						</ul>
-				</li>
-		</ul>
+		<div class="holder">
+			<h1>Смарт меню(дропдаун-меню) плагин smartmenus</h1>
+			<ul id="main-menu" class="sm sm-simple">
+					<li><a href="#">Item 1</a></li>
+					<li><a href="#">Item 2</a>
+							<ul>
+									<li><a href="#">Item 2-1</a></li>
+									<li><a href="#">Item 2-2</a></li>
+									<li><a href="#">Item 2-3</a></li>
+							</ul>
+					</li>
+					<li><a href="#">Item 3</a></li>
+					<li><a href="#">Item 4</a></li>
+					<li><a href="#">Item 5</a>
+							<ul>
+									<li><a href="#">Item 5-1</a></li>
+									<li><a href="#">Item 5-2</a></li>
+									<li><a href="#">Item 5-3</a></li>
+							</ul>
+					</li>
+			</ul>
+		</div>
 		<!-- Смарт-меню(дропдаун меню) с помощью плагина smartmenus -->
-		</ul>
 		<h2>Реализация валидации с пом. плагина Validation</h2>
 		<form id="offer-form" class="thanks-form" method="post">
 				<input class="selector" type="text" name="email" placeholder="Email">
@@ -110,7 +126,7 @@
 		<h2>Реализация табов</h2>
 		<div id="tabbedpanel">
 				<ul>
-						<!-- <li><a href="test-tabs.html">Описание товара</a></li>  -->
+						<!-- <li><a href="test-title.html">Описание товара</a></li>  -->
 						<!-- в табы так же можно вставлять отдельные страницы и также можно найти нужный контент в этой странице и отобразить в табе -->
 						<li><a href="#details">Подробно</a></li>
 						<li><a href="#reviews">Отзывы</a></li>
@@ -259,6 +275,7 @@
 		<br>
 		<br>
 		<br>
+		<!-- Кнопки submit, reset, button -->
 		<!-- Флакжки -->
 		<h2>Флажки</h2>
 		<div class="checkboks">
@@ -269,9 +286,17 @@
 				<input type="radio" id="three">
 				<label for="three">3</label>
 		</div>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
 		<!-- Флакжки -->
-		<!-- Кнопки submit, reset, button -->
-		</div>
+
+		<div id="progressbar"></div>
+
+		<a href="#" class="button">Кнопка</a>
+
 		<script src="build/vendor.js"></script>
 		<script src="build/app.js"></script>
 		<script src="http://localhost:35729/livereload.js?snipver=1"></script>
