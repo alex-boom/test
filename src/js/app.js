@@ -1,6 +1,9 @@
 import HP from './helpers';
 
-(function($) {
+//Обворачиваем код jQuery функцией noConflict для избежания конфликтов с другими библиотеками JS использующими переменную '$'.
+jQuery.noConflict()(function(){
+
+	(function($) {
 
 		//Плагин валидации инпутов в форме Validation описание видео http://2develop.ru/jquery/proverka-poley-s-pomoshtyyu-jquery.html
 		//так же можно подключить дополнительные поля проверки из additional-methods.js.
@@ -209,11 +212,192 @@ import HP from './helpers';
 			start: function(event){//фнукция на события(событие старт)
 				$('#hello').dialog('open');
 			},
-			stop: function(event){
+			stop: function(event){//stop - событие, function(); - обработчик события
 				$('#hello').dialog('close');
 			},
 		});
 
+			//draggable, droppable На основе двух этих плагинов можно сделать интерактивную корзину покупок стр.584, практика стр.596
+
+		$( "#draggable" ).draggable();
+		$( "#droppable" ).droppable({
+			hoverClass: 'openTrashcan',		//класс при наведени на объект
+			activeClass: 'highlight',			//класс при перемещении объекта
+			tolerance: 'fit',							//перетаскиваемый элемент должен полностью находитьсяв пределах области бросания другие параметры стр.588;
+			drop: function( event, ui ) {//drop - событие, function(); - обработчик события, можно сюда вписать deactivate аналог событию drop
+				$( this )
+					.addClass( "ui-state-highlight" )
+					.find( "p" )
+					.text( "Товар добавлен" )
+					.css('color', '#6bda5e');
+					// ui.helper.hide('explode'); //это ссылка на перетаскиваемый объект
+			},
+			activate: function( event, ui ) {
+				$( this )
+					.find( "p" )
+					.text( "Тащите сюда" );
+			},
+			over: function( event, ui ) {
+				$( this )
+					// .css({border: '10px solid green'}) можно и так задать цвет вместо параметра hoverClass: 'openTrashcan'
+					.find( "p" )
+					.text( "Бросайте!!!" );
+			},
+			out: function( event, ui ) {
+				$( this )
+					.removeClass( "ui-state-highlight" )
+					.find( "p" )
+					.html( "Ну что за люди <br>")
+					.append("<div style='text-align:center;font-size:50px'>:(</div>")
+			}
+		});
+					//Подробно объект ui стр.613
+					//Ajax стр.642
+					//В данном примере идет подгрузка аяксом штмл страниц в контейнер с классом ajax
+					//Запись не совсем правильная
+			$('.ajax').load('ajax-load-page.html');//стр.645
+
+			// $('.list').on('click', '.news', function(evt) {
+			// 	evt.preventDefault();
+			// 	$('.ajax').load('ajax-load-page1.html')
+			// });
+
+			// $('.list').on('click', '.blog', function(evt) {
+			// 	evt.preventDefault();
+			// 	$('.ajax').load('ajax-load-page2.html')
+			// });
+
+			// $('.list').on('click', '.forum', function(evt) {
+			// 	evt.preventDefault();
+			// 	$('.ajax').load('ajax-load-page3.html')
+			// });
+			// 		//Можно выбрать любой селектор со страницы подключаемой, а также в том числе и с индексной страницы
+			// $('.list').on('click', '.other', function(evt) {
+			// 	evt.preventDefault();
+			// 	$('.ajax').load('ajax-load-page.html h2')//выбрал заголовки h2
+			// });
+					//Правильная запись
+			$('.list a').click(function(evt) {
+				evt.preventDefault();
+				var url = $(this).attr('href');
+				$('.ajax').load(url);
+				// $('.ajax').load(url + " h2"); можно выбрать только заголовки h2 на загружаемых страницах или любой другой селектор
+			});
+				//GET, POST стр. 653
+
+			//$.post(url, data, callback);
+
+			//$.get(url, data, callback); 
+
+			//$.getJSON(url, data, callback); getJSON метод предназначен для обработки данных с сервера в фрмате JSON
+
+			//* url - адрсс обработчика
+			//* data - это переменная с значениями которые отправляются серверу на обработку
+			//* callback-функция обрабатывает полученный ответ с сервера
+			//**полученный ответ так же записывается в переменную data(можно назвать иначе) и передается в качестве первого аргумента callback-функции
 
 
-}(jQuery));
+			//callback функция ее вид стр. 662
+			//форма стр.668
+		$('#login').submit(function () {
+				var formData = $(this).serialize(); //serialize собирает введенные данные из формы в виде имя: значение(username=boom&password=5555)
+				$.post('login.php', formData, processData).error('ой');
+				function processData(result) {
+						console.log(result === 'pass');
+						if (result === 'pass') {
+								$('.main').html('<p>Вы авторизованы!</p>');
+						} else {
+								if ($('#fail').length === 0) {
+										$('#formwrapper').prepend('<p id="fail">Некорректная  информация. Попробуйте еще раз</p>');
+								}
+						}
+				} // end processData
+				return false;
+		}); // end submit
+
+
+
+			//Обработка в цикле each полученных данных от сервера в формате JSON(данные получены с внешнего сервера)
+			//С внешних сервером получить данные в формате JSON невозможно по безопастности, но используя способ JSONP это возможно.
+			//**JSONP - способ получения данных с сервера, использующий JSON в качестве способа кодирования
+			//*Пример: фрагметн в переменной URL - ?jsoncallback=? дает команду серверу передать данные способом JSONP.
+		var URL = "https://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
+		var searchInfo = {
+			// change this ID to another flickr ID (like your own if you have one)
+			id : "25053835@N03",
+			format : "json"
+		};
+
+		$.getJSON(URL,searchInfo,function(data) {
+
+			var photoHTML = '';
+
+			//Аргументы (i,photo) в анонимной функции метода each работают с массивом объектов data.items
+			//являют собой переменные i это индекс объекта в цикле, а photo это сам объект.
+			$.each(data.items,function(i,photo) {
+				photoHTML += '<span class="image">';
+				photoHTML += '<a href="' + photo.link + '">';
+				photoHTML += '<img src="' + photo.media.m.replace('_m','_s') + '"></a></span>';
+			}); // end each
+			$('#photos').append(photoHTML);
+		}); // end get JSON
+
+
+			//Локальное и серверное хранение данных стр. 725
+
+			//Функции обхода дерева DOM стр.742(работа с выборкой селектора jquery внутри функции события).
+
+			// alert($().jquery); узнать версию jquery
+
+			//метод slice вырезать часть строки.
+			/*
+			var $selector = $('.holder h1'),
+					test = $selector.text(),
+					rezult = test.slice(10);
+
+			$selector.text(rezult);
+			*/
+
+			//РЕГУЛЯРНЫЕ ВЫРАЖЕНИЯ стр.766
+
+			var sentence = 'April is the cruelest month.';
+			var aprMatch = /Apr(il)?\b/;
+			//функция search проверяет наличие заданной строки в переменной регулярного выражения если
+			//находит возвращает индекс первого символа строки если нет то возвращает -1
+			if (sentence.search(aprMatch) != -1) {
+			// найдена строка Apr или April
+			} else {
+			//не найдено
+			}
+			//поиск в содержимом конкретного выражения стр.779
+
+			$("html, body").animate({
+				scrollTop : $(".block1").offset().top
+			}, 100);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	}(jQuery));
+
+});

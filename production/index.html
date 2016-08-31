@@ -11,8 +11,12 @@
 		<style>
 			body {
 					padding: 100px;
-					max-width: 1200px;
+					max-width: 1300px;
 					margin: 0 auto;
+			}
+			
+			article {
+				background: #ccc;
 			}
 			
 			input {
@@ -47,6 +51,39 @@
 			#tabbedpanel {
 					margin-bottom: 100px;
 			}
+
+			.button {
+				background: #ccc;
+				padding: 10px;
+				margin: 20px auto;
+				display: inline-block;
+			}
+			#main-menu{
+				max-width: 1000px;
+			}
+			.holder{
+				max-width: 1200px;
+				height: 100px;
+			}
+
+			#draggable { width: 100px;
+				height: 100px;
+				padding: 0.5em;
+				float: left;
+				margin: 10px 10px 10px 0; }
+
+			#droppable { width: 150px;
+				height: 150px; padding: 0.5em;
+				float: left; margin: 10px; }
+
+			.highlight{/*класс при перемещении объекта*/
+				border: 10px solid red;
+			}
+
+			.openTrashcan{/*класс при наведени на объект*/
+				border: 10px solid green;
+			}
+
 		</style>
 
 </head>
@@ -62,55 +99,66 @@
 		<br>
 		<br>
 		<br>
+
 		<!-- Смарт-меню(дропдаун меню) с помощью плагина smartmenus -->
-		<h1>Смарт меню(дропдаун-меню) плагин smartmenus</h1>
-		<ul id="main-menu" class="sm sm-simple">
-				<li><a href="#">Item 1</a></li>
-				<li><a href="#">Item 2</a>
-						<ul>
-								<li><a href="#">Item 2-1</a></li>
-								<li><a href="#">Item 2-2</a></li>
-								<li><a href="#">Item 2-3</a></li>
-						</ul>
-				</li>
-				<li><a href="#">Item 3</a></li>
-				<li><a href="#">Item 4</a></li>
-				<li><a href="#">Item 5</a>
-						<ul>
-								<li><a href="#">Item 5-1</a></li>
-								<li><a href="#">Item 5-2</a></li>
-								<li><a href="#">Item 5-3</a></li>
-						</ul>
-				</li>
-		</ul>
+		<div class="holder">
+			<h1>Смарт меню(дропдаун-меню) плагин smartmenus</h1>
+			<ul id="main-menu" class="sm sm-simple">
+					<li><a href="#">Item 1</a></li>
+					<li><a href="#">Item 2</a>
+							<ul>
+									<li><a href="#">Item 2-1</a></li>
+									<li><a href="#">Item 2-2</a></li>
+									<li><a href="#">Item 2-3</a></li>
+							</ul>
+					</li>
+					<li><a href="#">Item 3</a></li>
+					<li><a href="#">Item 4</a></li>
+					<li><a href="#">Item 5</a>
+							<ul>
+									<li><a href="#">Item 5-1</a></li>
+									<li><a href="#">Item 5-2</a></li>
+									<li><a href="#">Item 5-3</a></li>
+							</ul>
+					</li>
+			</ul>
+		</div>
+
 		<!-- Смарт-меню(дропдаун меню) с помощью плагина smartmenus -->
-		</ul>
-		<h2>Реализация валидации с пом. плагина Validation</h2>
-		<form id="offer-form" class="thanks-form" method="post">
-				<input class="selector" type="text" name="email" placeholder="Email">
-				<br>
-				<input type="text" name="userName" />
-				<br>
-				<input class="left" name="url_input">
-				<br>
-				<input id="button" type="submit" data-href="http://google.com" value="Я ссылко" id="content1" title="Я кнопка регистрации" />
-		</form>
+		<div class="form-container">
+			<h2>Реализация валидации с пом. плагина Validation</h2>
+			<form id="offer-form">
+			<!-- <form id="offer-form" class="thanks-form" method="post"> -->
+					<input type="text" name="userName" placeholder="Name">
+					<br>
+					<input class="selector" type="text" name="email" placeholder="Email">
+					<br>
+					<!-- <input class="left" name="url_input"> -->
+					<br>
+					<input id="button" type="submit" data-href="http://google.com" value="Отправить" id="content1" title="Я кнопка регистрации" />
+			</form>
+		</div>
+		<!-- Смарт-меню(дропдаун меню) с помощью плагина smartmenus -->
 
 		<!-- JQUERY-UI -->
 		<h1 style="text-align: center">Глава JQUERY-UI</h1>
 		<a href="http://jqueryui.com/" target="blanck">Все эффекты виджеты и их демо смотрим тут</a>
+
 		<!-- Модальное окно -->
 		<div id="hello" title="Привет мир">
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
 		</div>
 		<!-- Модальное окно -->
+
 		<!-- К этой кнопке подвязанно диалоговое окно срабатывая на клик, а так же добавлена еще всплывающая подсказка -->
 		<a href="#" id="linck" title="Реализация всплыв. подсказки на jquery-ui так же кнопка запускает модальное окно">Я кнопко</a>
+
 		<!-- ТАБЫ -->
 		<h2>Реализация табов</h2>
 		<div id="tabbedpanel">
 				<ul>
-						<!-- <li><a href="test-tabs.html">Описание товара</a></li>  -->
+						<!-- <li><a href="test-title.html">Описание товара</a></li>  -->
+
 						<!-- в табы так же можно вставлять отдельные страницы и также можно найти нужный контент в этой странице и отобразить в табе -->
 						<li><a href="#details">Подробно</a></li>
 						<li><a href="#reviews">Отзывы</a></li>
@@ -127,6 +175,7 @@
 				</div>
 		</div>
 		<!-- ТАБЫ -->
+
 		<!-- Аккордеон -->
 		<h1>Аккордеон</h1>
 		<div id="accordion">
@@ -169,6 +218,7 @@
 		<br>
 		<br>
 		<!-- Аккордеон -->
+
 		<!-- jQuery UI Datepicker -->
 		<h2>jQuery UI Datepicker</h2>
 		<p>Date:
@@ -180,6 +230,7 @@
 		<br>
 		<br>
 		<!-- jQuery UI Datepicker -->
+
 		<!-- Selectmenu -->
 		<h2>Selectmenu</h2>
 		<form action="#">
@@ -249,6 +300,7 @@
 		<br>
 		<br>
 		<!-- Selectmenu -->
+
 		<!-- Кнопки submit, reset, button -->
 		<h2>Кнопки submit, reset, button</h2>
 		<input type="submit" id="submit" class="buttons" value="Отправить форму!">
@@ -259,6 +311,8 @@
 		<br>
 		<br>
 		<br>
+		<!-- Кнопки submit, reset, button -->
+
 		<!-- Флакжки -->
 		<h2>Флажки</h2>
 		<div class="checkboks">
@@ -269,9 +323,91 @@
 				<input type="radio" id="three">
 				<label for="three">3</label>
 		</div>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
 		<!-- Флакжки -->
-		<!-- Кнопки submit, reset, button -->
+
+		<!-- progressbar -->
+		<div id="progressbar"></div>
+		<a href="#" class="button">Кнопка</a>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<!-- progressbar -->
+
+		<!-- Droppable - Default functionality -->
+		<div class="container clearfix">
+			<h2>Перетаскиваемая корзина</h2>
+
+			<div id="draggable" class="ui-widget-content">
+				<p>Перетащите товар в корзину</p>
+			</div>
+
+			<div id="droppable" class="ui-widget-header">
+				<p>Корзина</p>
+			</div>
 		</div>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<!-- Droppable - Default functionality -->
+
+		<!-- Ajax -->
+
+		<section>
+			<h1 style="text-align:center;">Ajax</h1>
+			<span>Категории</span>
+			<ul class="list">
+				<li class="news"><a href="ajax-load-page1.html">Новости</a></li>
+				<li class="blog"><a href="ajax-load-page2.html">Блоги</a></li>
+				<li class="forum"><a href="ajax-load-page3.html">Форум</a></li>
+				<li class="other"><a href="ajax-load-page.html">Другое</a></li>
+			</ul>
+			<div class="ajax"></div>
+		</section>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+
+		<!-- Формы Ajax -->
+		<div class="content">
+			<div class="main">
+				<h1>Авторизация Форма Ajax</h1>
+				<div id="formwrapper">
+					<form id="login">
+						<p>
+							<label for="username">Имя пользователя:</label>
+							<input type="text" name="username" id="username">
+						</p>
+						<p>
+							<label for="password">Пароль: </label>
+							<input type="password" name="password" id="password">
+						</p>
+						<p>
+							<input type="submit" name="button" id="button" value="Подтвердить" >
+						</p>
+					</form>
+				</div>
+			</div>
+		</div>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<!-- Формы Ajax -->
+
+		<!-- Ajax -->
+
 		<script src="build/vendor.js"></script>
 		<script src="build/app.js"></script>
 		<script src="http://localhost:35729/livereload.js?snipver=1"></script>
