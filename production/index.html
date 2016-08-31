@@ -10,8 +10,7 @@
 
 		<style>
 			body {
-					padding: 100px;
-					max-width: 1300px;
+					max-width: 1200px;
 					margin: 0 auto;
 			}
 			
@@ -82,6 +81,50 @@
 
 			.openTrashcan{/*класс при наведени на объект*/
 				border: 10px solid green;
+			}
+
+			.circle{
+				padding: 100px 0;
+			}
+			.box{
+				position: relative;
+				display: inline-block;
+				width: 33%;
+				text-align: center;
+			}
+			.box:hover .front{
+				opacity: 0;
+			}
+			.box:hover .back{
+				opacity: 1;
+			}
+			.box p{
+				vertical-align: middle;
+				line-height: 200px;
+			}
+			.box .text{
+				line-height: inherit;
+			}
+			.front{
+				width: 200px;
+				height: 200px;
+				border: 1px solid red;
+				border-radius: 50%;
+				margin: 0 auto;
+				transition: opacity .5s ease;
+			}
+			.back{
+				position: absolute;
+				top: 0;
+				/*left: 50%;*/
+				width: 200px;
+				vertical-align: middle;
+				border: 1px solid red;
+				border-radius: 20px;
+				transform: translateX(50%);
+				opacity: 0;
+				padding: 20px 0 5px;
+				transition: opacity 1s ease;
 			}
 
 		</style>
@@ -368,7 +411,7 @@
 				<li class="news"><a href="ajax-load-page1.html">Новости</a></li>
 				<li class="blog"><a href="ajax-load-page2.html">Блоги</a></li>
 				<li class="forum"><a href="ajax-load-page3.html">Форум</a></li>
-				<li class="other"><a href="ajax-load-page.html">Другое</a></li>
+				<li class="other stop"><a href="ajax-load-page.html">Другое</a></li>
 			</ul>
 			<div class="ajax"></div>
 		</section>
@@ -382,6 +425,7 @@
 		<div class="content">
 			<div class="main">
 				<h1>Авторизация Форма Ajax</h1>
+				<p>логин: 007, пароль: secret</p>
 				<div id="formwrapper">
 					<form id="login">
 						<p>
@@ -407,6 +451,74 @@
 		<!-- Формы Ajax -->
 
 		<!-- Ajax -->
+		<!-- Вывод циклом each картинок полученных по технологии Ajax от веб-сервера в фомате JSON -->
+		<h2>Вывод циклом - each картинок полученных по технологии Ajax от веб-сервера в фомате JSON</h2>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<div id="photos"></div>
+		<!-- Вывод циклом each картинок полученных по технологии Ajax от веб-сервера в фомате JSON -->
+
+		<div class="circle">
+			<div class="box">
+				<div class="front">
+					<p>Привет как дела</p>
+				</div>
+				<div class="back">
+					<p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit vitae ipsa nihil officiis, nam rerum fuga amet laborum ducimus dignissimos blanditiis quae neque nulla inventore alias magnam molestias? Quibusdam, nemo!</p>
+				</div>
+			</div>
+			<div class="box">
+				<div class="front">
+					<p>Привет как дела</p>
+				</div>
+				<div class="back">
+					<p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit vitae ipsa nihil officiis, nam rerum fuga amet laborum ducimus dignissimos blanditiis quae neque nulla inventore alias magnam molestias? Quibusdam, nemo!</p>
+				</div>
+			</div>
+			<div class="box">
+				<div class="front">
+					<p>Привет как дела</p>
+				</div>
+				<div class="back">
+					<p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit vitae ipsa nihil officiis, nam rerum fuga amet laborum ducimus dignissimos blanditiis quae neque nulla inventore alias magnam molestias? Quibusdam, nemo!</p>
+				</div>
+			</div>
+		</div>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+
+<style>
+	.block-container{
+		margin-bottom: 50px;
+	}
+	.block{
+		float: left;
+		width: 50%;
+		background: #ccc;
+	}
+	.block .square{
+		background: black;
+		width: 40px;
+		height: 40px;
+		margin: auto;
+	}
+</style>
+
+		<h1>Тест css</h1>
+		<div class="block-container">
+			<div class="block">
+				<div class="square"></div>
+			</div>
+			<div class="block">
+				<div class="square"></div>
+			</div>
+		</div>
 
 		<script src="build/vendor.js"></script>
 		<script src="build/app.js"></script>
