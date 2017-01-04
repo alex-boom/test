@@ -1,0 +1,17 @@
+/* carousel basic styles */
+div.carousel {
+	position: relative;
+}
+div.carousel div.mask {
+	position: relative;
+	overflow: hidden;
+	/*width: 600px;*/
+}
+div.carousel div.mask div.slideset {
+	width: 99999px;
+	float: left;
+}
+div.carousel div.mask div.slide {
+	/*width: 600px;*/
+	float: left;
+}
