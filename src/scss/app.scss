@@ -1,6 +1,6 @@
 $breakpoints: (
 	'xs-phone': 320px,
-	'phone': 480px,
+	'phone': 550px,
 	'tablet': 768px,
 	'desktop': 1024px,
 	'widescreen': 1200px
@@ -93,13 +93,9 @@ a {
 
 .holder {
 	background-color: rgba(255,255,255,.9);
-	// box-shadow: 0 0 7px 1px rgba(0,0,0,.5);
 	border-radius: 3px;
 	overflow: hidden;
-	padding: 30px 0;
-	@include media('<550px') {
-		padding:20px 0;
-	}
+	padding: 60px 0;
 	.back {
 		float: right;
 		margin: 10px 30px 0 0;
@@ -124,6 +120,7 @@ a {
 			padding: 0 5px 20px;
 		}
 		a {
+			position: relative;
 			transition: opacity .3s;
 			display: block;
 			width: 101px;
@@ -131,6 +128,24 @@ a {
 			margin: 0 auto 10px;
 			&:hover {
 				opacity: .7;
+			}
+			.count{
+				position: absolute;
+				right: 0;top: 5px;
+				width: 35px;
+				height: 35px;
+				line-height: 35px;
+				color: #fff;
+				background: red;
+				border-radius: 50%;
+				font-size: 17px;
+				transform: translateX(50%);
+				@include media('<phone'){
+					font-size: 11px;
+					width: 20px;
+					height: 20px;
+					line-height: 20px;
+				}
 			}
 			@include media('<550px') {
 				width: 50px;
@@ -156,21 +171,21 @@ a {
 		ul{
 			@extend %listreset;
 			position: absolute;
-			bottom: 0;
+			bottom: 25px;
 			left: 50%;
 			transform: translateX(-50%);
 			li{
 				display: inline-block;
-				background: #ccc;
+				background: #dcdfe0;
 				border-radius: 50%;
-				width: 15px;
-				height: 15px;
-				margin: 5px;
+				width: 14px;
+				height: 14px;
+				margin: 4px;
 				a{
 					display: none;
 				}
 				&.active{
-					background: red;
+					background: #b3b6b7;
 				}
 			}
 		}
